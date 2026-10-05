@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.escola-logo {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+
+    animation: aparecerLogo 1.2s ease forwards;
+
+    animation-delay: 2s;
+}
+
+.escola-logo img {
+    width: 650px;
+}
+
+@keyframes entradaLogo {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+
+}
+
+.escola {
+    width: 100%;
+    height: 100vh;
+
+    opacity: 0;
+    animation: aparecerIlha 2s ease forwards;
+    background-image: url("imagens/academia.png");
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes aparecerIlha {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
