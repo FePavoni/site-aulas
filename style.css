@@ -1,46 +1,45 @@
+/* ========================================
+   RESET
+======================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.escola-logo {
-    opacity: 0;
-    transform: translateY(-30px) scale(0.9);
 
-    animation: aparecerLogo 1.2s ease forwards;
+/* ========================================
+   PÁGINA
+======================================== */
 
-    animation-delay: 2s;
+body {
+    overflow-x: hidden;
 }
 
-.escola-logo img {
-    width: 650px;
-}
 
-@keyframes entradaLogo {
-    from {
-        opacity: 0;
-        transform: translateY(-30px) scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
-
-}
+/* ========================================
+   ESCOLA
+======================================== */
 
 .escola {
     width: 100%;
     height: 100vh;
 
     opacity: 0;
+
     animation: aparecerIlha 2s ease forwards;
+
     background-image: url("imagens/academia.png");
+
     background-size: cover;
     background-position: center;
 }
+
+
+/* ========================================
+   ANIMAÇÃO DA ESCOLA
+======================================== */
 
 @keyframes aparecerIlha {
 
@@ -51,5 +50,263 @@
     to {
         opacity: 1;
     }
+
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.escola-logo {
+    opacity: 0;
+
+    transform: translateY(-30px) scale(0.9);
+
+    animation: entradaLogo 1.2s ease forwards;
+
+    animation-delay: 1s;
+}
+
+
+.escola-logo img {
+    width: 650px;
+}
+
+
+/* ========================================
+   ANIMAÇÃO DA LOGO
+======================================== */
+
+@keyframes entradaLogo {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-30px)
+            scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* ========================================
+   SEÇÃO DO JADEN
+======================================== */
+
+.sobre-jaden {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* ========================================
+   CENA DO JADEN
+======================================== */
+
+.cena-jaden {
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: white;
+}
+
+
+/* ========================================
+   JADEN
+======================================== */
+
+.jaden-personagem {
+
+    position: absolute;
+
+    width: 55%;
+    height: 100%;
+
+    left: -5%;
+    bottom: 0;
+
+    object-fit: contain;
+    object-position: bottom center;
+
+    opacity: 0;
+}
+
+
+/* ========================================
+   JADEN APARECE
+======================================== */
+
+.sobre-jaden.ativo .jaden-personagem {
+
+    animation:
+        entradaJaden
+        1.5s
+        ease
+        forwards;
+
+}
+
+
+/* ========================================
+   ANIMAÇÃO DO JADEN
+======================================== */
+
+@keyframes entradaJaden {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-150px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ========================================
+   TEXTO
+======================================== */
+
+.jaden {
+
+    position: absolute;
+
+    width: 40%;
+
+    left: 58%;
+    top: 50%;
+
+    transform:
+        translate(-40%, -50%);
+
+    padding: 40px;
+
+    border: none;
+
+    background: transparent;
+
+    opacity: 0;
+
+}
+
+
+/* ========================================
+   TEXTO APARECE DEPOIS DO JADEN
+======================================== */
+
+.sobre-jaden.ativo .jaden {
+
+    animation:
+        entradaTexto
+        1s
+        ease
+        forwards;
+
+    animation-delay: 1.5s;
+
+}
+
+
+/* ========================================
+   ANIMAÇÃO DO TEXTO
+======================================== */
+
+@keyframes entradaTexto {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translate(-40%, -50%);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%);
+
+    }
+
+}
+
+
+/* ========================================
+   TÍTULO
+======================================== */
+
+.jaden h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ========================================
+   PARÁGRAFO
+======================================== */
+
+.jaden p {
+
+    font-size: 24px;
+
+    line-height: 1.5;
+
+}
+
+
+/* ========================================
+   PRÓXIMA SEÇÃO
+======================================== */
+
+.proxima-secao {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #071C19;
+
+    color: white;
+}
+
+
+.proxima-secao h2 {
+
+    font-size: 40px;
 
 }
